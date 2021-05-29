@@ -1,0 +1,26 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.laptrinhjavaswing.service;
+
+import com.laptrinhjavaswing.model.SanPhamModel;
+import java.util.List;
+
+/**
+ *
+ * @author ngova
+ */
+public interface ISanPhamService {
+
+    List<SanPhamModel> findAll();
+
+    List<SanPhamModel> findByCodeLoaiSanPham(int MaLoaiSanPham);
+
+    List<SanPhamModel> findByCodeMaSanPham(int maSanPham);
+
+    Object save(SanPhamModel hoaDonModel);
+
+    void edit(SanPhamModel sanPham,int maSanPham, int HeSo);
+}
